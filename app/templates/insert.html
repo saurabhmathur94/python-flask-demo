@@ -1,0 +1,19 @@
+{% extends "includes/_layout.html" %}
+{% block body %}
+<h1>Welcome everyone to Teacher Dashboard</h1>
+<h1>Add a new teacher</h1>
+<form action="{{ url_for('insert') }}" method="post">
+  <div>
+    <label for="name">Name:</label>
+    <input name="name" id="name" />
+
+    <label for="age">Age:</label>
+    <input name="age" id="age" type="number" />
+
+      <label for="address">Address:</label>
+    <input name="address" id="address" />
+  </div>
+
+  <input type="submit"  value="Submit" />
+</form>
+{% endblock %}
